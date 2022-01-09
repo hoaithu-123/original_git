@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>AJAX</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		var ajax = new XMLHttpRequest();
+		ajax.open("GET", "server.php", true);
+		ajax.onreadystatechange = function () {
+			if(this.readyState == 4 && this.status == 200){
+				console.log(this.responseText);
+				console.log("ok");
+			}
+		};
+		ajax.send();
+	</script>
+</body>
+</html>

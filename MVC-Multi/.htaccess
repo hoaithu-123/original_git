@@ -1,0 +1,5 @@
+RewriteEngine On
+# xác định file : nếu file không được định nghĩa ex: tin-tuc/123 thi chạy vào index.php($url)
+# nếu file xác định ex: .css, .js, .html thì chạy vào bt lấy tham số $url bt
+REwriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php?url=$1 [L,QSA]
